@@ -169,19 +169,12 @@ optimized for viewing load-bbalanced instances of Oracle WebLogic Servers.
 
 ## Installation
 
-### dynaTrace 4.1:
+### dynaTrace >= 5.5:
 
 **Step 1:** Import the [dynaTrace Oracle WebLogic FastPack](dynaTrace_Oracle_WebLogic_FastPack-4.1.dtp) Plugin into your dynaTrace Server. This FastPack Plugin automatically installs the referenced System Profile, Extended Metrics Plugin and the seven Dashboards. 
 
 **Step 2: (Optional):** Install the [Optimized Oracle WebLogic Dashboards](Optimized_Oracle_WebLogic_Dashboards.zip) by unzipping the archive and opening them in the dynaTrace client. 
 
-### dynaTrace 3.5:
-
-**Step 1:** Import the [dynaTrace Oracle WebLogic Extended Metrics Plugin](com.dynatrace.weblogic.extended_1.0.0.0.jar) into your dynaTrace Server. For details on how to do this please refer to the [Online Documentation on Plugin Management](Oracle_WebLogic_FastPack.html). 
-
-**Step 2:** Import the [dynaTrace Oracle WebLogic FastPack](dynaTrace_Oracle_WebLogic_FastPack.dtp) Plugin into your dynaTrace Server. This FastPack Plugin automatically installs the referenced System Profile and the seven Dashboards. 
-
-**Step 3: (Optional):** Install the [Optimized Oracle WebLogic Dashboards](Optimized_Oracle_WebLogic_Dashboards.zip) by unzipping the archive and opening them in the dynaTrace client. 
 
 ## Configuration
 
