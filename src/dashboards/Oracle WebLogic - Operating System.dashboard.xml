@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="3.5.1.2342" date="4/8/11 7:27 AM">
+  <dashboardconfig memento.version="3.5.1.2342" icon="com.dynatrace.diagnostics.portlets/icons/chart_portlet_type.gif" sessiontype="live" locationassource="false" authorname="admin" opendrilldowninnewdashboard="false" sessionid="Oracle WebLogic" bgcolor="255,255,255,255" modified="2011-04-08T07:27:28+0200" id="c6de6be2-582a-4a84-b5df-18410043c84b" revision="0000012f-3394-500f-ba97-431129149171" source="server://goller" created="2010-11-09T18:05:27+0100" description="" name="Oracle WebLogic - Operating System" modifiedbyname="christian.grimm" locationascomparesource="false">
+    <reportconfig lines.per.table="100" enabled="true" print.legends="true" orientation="portrait" pagesize="A4" type="PDF" title="" override="false" levels.per.tree="10" description="" print.images="true" formatpdf="PDF Report" />
+    <filter>
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion includemeasurename="true" includetestname="true" type="tests" teststatus="OK" />
+      <criterion type="btm" />
+      <criterion type="timeframe">
+        <timeframe start="0" type="Auto" end="9223372036854775807" />
+      </criterion>
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion type="webrequest">
+        <textpattern enabled="true" name="uri" type="contains" />
+        <textpattern enabled="true" name="query" type="contains" />
+      </criterion>
+      <criterion type="purepaths" mode="all">
+        <textpattern enabled="true" type="contains" />
+      </criterion>
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <textpattern enabled="true" name="timername" type="contains" />
+        <textpattern enabled="true" name="pageurl" type="contains" />
+      </criterion>
+      <criterion showrendering="true" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+    </filter>
+    <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="CUSTOM" namefontcolor="128,128,128" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="org.eclipse.ui.internal.ViewStack@7c8349" selectionindex="-1" isplaceholder="true" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.24797843" folderid="760a5671-bcad-4580-b663-d9d4deb72b2a" selectionindex="-1" isplaceholder="true" relatedfolderid="org.eclipse.ui.internal.ViewStack@7c8349" portletconfigorder="">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.745283" folderid="org.eclipse.ui.internal.ViewStack@b6fffd" selectionindex="0" relatedfolderid="760a5671-bcad-4580-b663-d9d4deb72b2a" portletconfigorder="ef0168a1-e1cf-4f49-be1c-2f0b74542a24">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.47239265" folderid="org.eclipse.ui.internal.ViewStack@1a0a7e5" selectionindex="-1" isplaceholder="true" relatedfolderid="org.eclipse.ui.internal.ViewStack@b6fffd" portletconfigorder="">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.15030675" folderid="org.eclipse.ui.internal.ViewStack@ada1c9" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@b6fffd" portletconfigorder="2821623c-0a86-4d64-b4b8-2a3b77a98fe5">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.49729243" folderid="org.eclipse.ui.internal.ViewStack@187a5a0" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@ada1c9" portletconfigorder="ce258514-ae00-4c64-9046-50183068f1db">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.66003615" folderid="org.eclipse.ui.internal.ViewStack@1a035f0" selectionindex="0" relatedfolderid="760a5671-bcad-4580-b663-d9d4deb72b2a" portletconfigorder="d198d44b-cbc3-4495-88f7-9050118fe4c1">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.15030675" folderid="org.eclipse.ui.internal.ViewStack@219f42" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@1a035f0" portletconfigorder="90375036-e85e-4c0b-82dd-d93dfcd858ec">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.31859207" folderid="org.eclipse.ui.internal.ViewStack@1ef6095" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@219f42" portletconfigorder="b80fde54-0981-464e-b453-423ded33c26a">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.49801326" folderid="org.eclipse.ui.internal.ViewStack@1cbd3df" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@1ef6095" portletconfigorder="03c042d2-434a-4127-8748-eb1fe4dbfed9">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.48767123" folderid="org.eclipse.ui.internal.ViewStack@19ad8c1" selectionindex="-1" isplaceholder="true" relatedfolderid="760a5671-bcad-4580-b663-d9d4deb72b2a" portletconfigorder="">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.1518405" folderid="org.eclipse.ui.internal.ViewStack@1e973e9" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@19ad8c1" portletconfigorder="85f6d569-574b-4f9e-92b7-af0a9b841cce">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.15030675" folderid="org.eclipse.ui.internal.ViewStack@1c9777d" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@1e973e9" portletconfigorder="35328cb8-9b3d-4a21-9e87-8b8ca843de80">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.1518405" folderid="org.eclipse.ui.internal.ViewStack@e9325e" selectionindex="0" relatedfolderid="760a5671-bcad-4580-b663-d9d4deb72b2a" portletconfigorder="284cfcd1-4293-4ba9-b4e9-ab8df5e36c3c">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.49846625" folderid="org.eclipse.ui.internal.ViewStack@13c238b" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@e9325e" portletconfigorder="236cc404-5f05-4fd9-b4de-207e8aa8db67">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.4949495" folderid="55967383-cf8a-4c3f-a9a8-7c7642664be1" selectionindex="0" relatedfolderid="760a5671-bcad-4580-b663-d9d4deb72b2a" portletconfigorder="46a1adc9-3b2f-4f12-96ec-747767f3ed5e">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="true" descriptionfontsize="8" nameshow="true" headertype="DEFAULT" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.49846625" folderid="b60af8d7-fbc3-469d-b471-70543e71adf3" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@7c8349" portletconfigorder="b1102337-ad4d-4f5f-864c-9e0d4628273c">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@219f42" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="90375036-e85e-4c0b-82dd-d93dfcd858ec" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Disk Read / Write" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="6" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="bytes" id="f3aa1d3e-22fb-48fa-8370-0dfe199dde06" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Disk Reads/sec" sourcecolor="RGB(128,128,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="bytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Disk Reads/sec" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Disk Reads/sec" metrickeyid="Disk Reads/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="bytes" id="1f6100e1-3849-47e8-9d7b-a05a4cce30a3" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="false" name="Disk Writes/sec" sourcecolor="RGB(64,128,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="bytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Disk Writes/sec" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Disk Writes/sec" metrickeyid="Disk Writes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="bytes" fetchmeasurecolor="true" id="9e4e9372-bc56-319f-8fa3-1a3488e07582" displayrate="10s" unit="bytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Disk Reads/sec" sourcecolor="RGB(128,128,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Disk Reads/sec" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Disk Reads/sec" metrickeyid="Disk Reads/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="bytes" fetchmeasurecolor="true" id="5ede0e15-64e2-37fb-884c-bcc5463efcf4" displayrate="10s" unit="bytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Disk Writes/sec" sourcecolor="RGB(64,128,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Disk Writes/sec" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Disk Writes/sec" metrickeyid="Disk Writes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="bytes" fetchmeasurecolor="true" id="ee4f93c5-504f-33d7-b7c8-f0f736ac73ec" displayrate="10s" unit="bytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Disk Reads/sec" sourcecolor="RGB(128,128,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Disk Reads/sec" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Disk Reads/sec" metrickeyid="Disk Reads/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="bytes" fetchmeasurecolor="true" id="ae214307-80fd-338c-942f-fecbfb527328" displayrate="10s" unit="bytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Disk Writes/sec" sourcecolor="RGB(64,128,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Disk Writes/sec" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Disk Writes/sec" metrickeyid="Disk Writes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="bytes" fetchmeasurecolor="false" id="127da850-dea5-3fad-93b2-000ad8358484" displayrate="10s" unit="bytes" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Disk Reads/sec" sourcecolor="RGB(170,98,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Disk Reads/sec" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Disk Reads/sec" metrickeyid="Disk Reads/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="bytes" fetchmeasurecolor="false" id="f805bab4-d97d-3730-9caa-c1965eec5b72" displayrate="10s" unit="bytes" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Disk Writes/sec" sourcecolor="RGB(189,4,9,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Disk Writes/sec" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Disk Writes/sec" metrickeyid="Disk Writes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1cbd3df" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="03c042d2-434a-4127-8748-eb1fe4dbfed9" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Disk Space" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="7" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="kilobytes" id="386b2abf-720b-40bb-b7c6-3d5458d1eb27" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Used Diskspace" sourcecolor="RGB(64,64,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="kilobytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Used Diskspace" metrickeyid="Used Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="kilobytes" id="edfa6434-bb95-4038-93ee-00ee2b327791" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="false" name="Total Diskspace" sourcecolor="RGB(192,64,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="kilobytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Total Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Total Diskspace" metrickeyid="Total Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="f8ee6d2b-18c0-3b99-8546-137f34d404a8" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Used Diskspace" sourcecolor="RGB(128,0,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.30" parentkeyid="Used Diskspace" metrickeyid="Used Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.30" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="f4f0c24b-2612-307d-8011-c526702cfe8b" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Total Diskspace" sourcecolor="RGB(0,128,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Total Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.30" parentkeyid="Total Diskspace" metrickeyid="Total Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.30" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="bfaf36e9-42f0-3367-84d2-df33e2cf336f" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Used Diskspace" sourcecolor="RGB(64,64,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="dm800" parentkeyid="Used Diskspace" metrickeyid="Used Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="dm800" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="9951dcdc-5a91-32d1-98ea-823017e47d3d" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Total Diskspace" sourcecolor="RGB(192,64,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Total Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="dm800" parentkeyid="Total Diskspace" metrickeyid="Total Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="dm800" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="b6d7c413-722c-3a2c-ab2b-9ea54bbbc996" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Used Diskspace" sourcecolor="RGB(64,64,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Used Diskspace" metrickeyid="Used Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="08cf1c4d-c7fb-3b95-a9a1-2d18e1c8d7dc" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Total Diskspace" sourcecolor="RGB(192,64,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Total Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Total Diskspace" metrickeyid="Total Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="6c0f2a4e-50ac-328f-817a-370460874aba" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Used Diskspace" sourcecolor="RGB(64,64,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Used Diskspace" metrickeyid="Used Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="316a12a8-80fe-359f-bf7f-d8df8d9ac80f" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Total Diskspace" sourcecolor="RGB(192,64,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Total Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Total Diskspace" metrickeyid="Total Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="false" id="242a9d7d-fe9f-3d01-ad0d-0ef923b005b9" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Used Diskspace" sourcecolor="RGB(189,4,9,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Used Diskspace" metrickeyid="Used Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="false" id="8f709e36-2288-3574-a3cb-2d0bd0563082" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Total Diskspace" sourcecolor="RGB(192,192,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Total Diskspace" metricgroupkey="Unix Filesystem" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Total Diskspace" metrickeyid="Total Diskspace" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="292" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="b60af8d7-fbc3-469d-b471-70543e71adf3" locationassource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" usedashboardsource="true" heightmode="AdjustToFontSize" bgcolor="236,233,216,255" id="b1102337-ad4d-4f5f-864c-9e0d4628273c" addfilterinfo="false" source="server://goller" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="LEFT" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="                       WebLogic Operating System Overview" description="" name="Oracle" typeid="com.dynatrace.diagnostics.portlets.text.Text" ismaster="false" locationascomparesource="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(128,128,128,255)">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="11" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" enabled="false" time="5" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="36" style="BOLD" name="Arial" />
+      <image length="37160" offset="-1">
+        <chunk data="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AABCbGQgVW50RiNSbHQAAAAAAAAAAAAAAABSc2x0VW50RiNQeGxAUgAAAAAAAAAAAAp2ZWN0b3JEYXRhYm9vbAEAAAAAUGdQc2VudW0AAAAAUGdQcwAAAABQZ1BDAAAAAExlZnRVbnRGI1JsdAAAAAAAAAAAAAAAAFRvcCBVbnRGI1JsdAAAAAAAAAAAAAAAAFNjbCBVbnRGI1ByY0BZAAAAAAAAOEJJTQPtAAAAAAAQAEgAAAABAAIASAAAAAEAAjhCSU0EJgAAAAAADgAAAAAAAAAAAAA/gAAAOEJJTQQNAAAAAAAEAAAAHjhCSU0EGQAAAAAABAAAAB44QklNA/MAAAAAAAkAAAAAAAAAAAEAOEJJTScQAAAAAAAKAAEAAAAAAAAAAjhCSU0D9QAAAAAASAAvZmYAAQBsZmYABgAAAAAAAQAvZmYAAQChmZoABgAAAAAAAQAyAAAAAQBaAAAABgAAAAAAAQA1AAAAAQAtAAAABgAAAAAAAThCSU0D+AAAAAAAcAAA/////////////////////////////wPoAAAAAP////////////////////////////8D6AAAAAD/////////////////////////////A+gAAAAA/////////////////////////////wPoAAA4QklNBAgAAAAAABAAAAABAAACQAAAAkAAAAAAOEJJTQQeAAAAAAAEAAAAADhCSU0EGgAAAAADRwAAAAYAAAAAAAAAAAAAADcAAAETAAAACQBvAHIAYQBjAGwAZQBSAEUARAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABEwAAADcAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAG51bGwAAAACAAAABmJvdW5kc09iamMAAAABAAAAAAAAUmN0MQAAAAQAAAAAVG9wIGxvbmcAAAAAAAAAAExlZnRsb25nAAAAAAAAAABCdG9tbG9uZwAAADcAAAAAUmdodGxvbmcAAAETAAAABnNsaWNlc1ZsTHMAAAABT2JqYwAAAAEAAAAAAAVzbGljZQAAABIAAAAHc2xpY2VJRGxvbmcAAAAAAAAAB2dyb3VwSURsb25nAAAAAAAAAAZvcmlnaW5lbnVtAAAADEVTbGljZU9yaWdp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PHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6Y3JzPSJodHRwOi8vbnMuYWRvYmUuY29tL2NhbWVyYS1yYXctc2V0dGluZ3MvMS4wLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIGNyczpBbHJlYWR5QXBwbGllZD0iVHJ1ZSIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgeG1wOkNyZWF0ZURhdGU9IjIwMTAtMTEtMDlUMTM6NTQ6MzMrMDE6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDEwLTExLTA5VDE0OjA3OjE3KzAxOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDEwLTExLTA5VDE0OjA3OjE3KzAxOjAwIiBkYzpmb3JtYXQ9ImltYWdlL2pwZWciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Rjg3RjExNzQwNzIwNjgxMTkzOTRBRjM4RTZBNUIxRTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Rjc3RjExNzQwNzIwNjgxMTkzOTRBRjM4RTZBNUIxRTYiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExOTM5NEFGMzhFNkE1QjFFNiI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOkY3N0YxMTc0MDcyMDY4MTE5Mzk0QUYzOEU2QTVCMUU2IiBzdEV2dDp3aGVuPSIyMDEwLTExLTA5VDE0OjA3OjE3KzAxOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6Rjg3RjExNzQwNzIwNjgxMTkzOTRBRjM4RTZBNUIxRTYiIHN0RXZ0OndoZW49IjIwMTAtMTEtMDlUMTQ6MDc6MTcrMDE6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3hwYWNrZXQgZW5kPSJ3Ij8+/+4ADkFkb2JlAGRAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQEBAQEBAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/8AAEQgANwETAwERAAIRAQMRAf/dAAQAI//EAaIAAAAGAgMBAAAAAAAAAAAAAAcIBgUECQMKAgEACwEAAAYDAQEBAAAAAAAAAAAABgUEAwcCCAEJAAoLEAACAQMEAQMDAgMDAwIGCXUBAgMEEQUSBiEHEyIACDEUQTIjFQlRQhZhJDMXUnGBGGKRJUOhsfAmNHIKGcHRNSfhUzaC8ZKiRFRzRUY3R2MoVVZXGrLC0uLyZIN0k4Rlo7PD0+MpOGbzdSo5OkhJSlhZWmdoaWp2d3h5eoWGh4iJipSVlpeYmZqkpaanqKmqtLW2t7i5usTFxsfIycrU1dbX2Nna5OXm5+jp6vT19vf4+foRAAIBAwIEBAMFBAQEBgYFbQECAxEEIRIFMQYAIhNBUQcyYRRxCEKBI5EVUqFiFjMJsSTB0UNy8BfhgjQlklMYY0TxorImNRlUNkVkJwpzg5NGdMLS4vJVZXVWN4SFo7PD0+PzKRqUpLTE1OT0laW1xdXl9ShHV2Y4doaWprbG1ub2Z3eHl6e3x9fn90hYaHiImKi4yNjo+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8AB/5OfKn5QYT5KfIbDYf5Hd7YnEYjvDtbG4rFY3tnfVHjcXjqLfOdpqKgx9JT5yOClo6SCNUjjRVVVUAAe8TN73zfYd53uCDerkKLqan6sox4tAKfZ5eXX0Xe0XtB7R7l7S+2d/f+12xT3k2w2c88823WpmnJtIqnMXmakniTk56A7/Zvfln/AN5PfIT/ANHH2B/9f/ZX/WHff+j3df8AOaXqQf8AWU9l/wDwkvLP/cttP+tfXv8AZvfln/3k98g//Rx9gf8A1/8Afv6w77/0e7r/AJzS9e/1k/Zf/wAJLyz/ANy20/619e/2b35Y/wDeT3yD/wDRx9gf/X/37+sO/f8AR7uv+c0vVv8AWV9nf/CS8sf9y20/61de/wBm9+Wf/eT3yD/9HH2B/wDX/wB+/rDvv/R7uv8AnNL1X/WT9l//AAkvLP8A3LbT/rX17/Zvfln/AN5PfIP/ANHH2B/9f/fv6w77/wBHu6/5zS9e/wBZP2X/APCS8s/9y20/619e/wBm9+Wf/eT3yD/9HH2B/wDX/wB+/rDvv/R7uv8AnNL17/WT9l//AAkvLP8A3LbT/rX17/Zvfln/AN5PfIP/ANHH2B/9f/fv6w77/wBHu6/5zS9e/wBZP2X/APCS8s/9y20/619e/wBm9+Wf/eT3yD/9HH2B/wDX/wB+/rDvv/R7uv8AnNL17/WT9l//AAkvLP8A3LbT/rX17/Zvfln/AN5PfIP/ANHH2B/9f/fv6w77/wBHu6/5zS9e/wBZP2X/APCS8s/9y20/619e/wBm9+Wf/eT3yD/9HH2B/wDX/wB+/rDvv/R7uv8AnNL17/WT9l//AAkvLP8A3LbT/rX17/Zvflj/AN5PfIP/ANHH2B/9f/fv6w79/wBHu6/5zS9W/wBZX2d/8JLyx/3LbT/rV17/AGb35Z/95PfIP/0cfYH/ANf/AH7+sO+/9Hu6/wCc0vVf9ZP2X/8ACS8s/wDcttP+tfXv9m9+Wf8A3k98hP8A0cfYH/1/9+/rDvv/AEe7r/nNL17/AFk/Zf8A8JLyz/3LbT/rX17/AGb35Y/95PfIP/0cfYH/ANf/AH7+sO/f9Hu6/wCc0vVv9ZX2d/8ACS8sf9y20/61de/2b35Z/wDeT3yD/wDRx9gf/X/37+sO+/8AR7uv+c0vVf8AWT9l/wDwkvLP/cttP+tfXv8AZvfln/3k98g//Rx9gf8A1/8Afv6w77/0e7r/AJzS9e/1k/Zf/wAJLyz/ANy20/619e/2b35Z/wDeT3yD/wDRx9gf/X/37+sO+/8AR7uv+c0vXv8AWT9l/wDwkvLP/cttP+tfXv8AZvfln/3k98g//Rx9gf8A1/8Afv6w77/0e7r/AJzS9e/1k/Zf/wAJLyz/ANy20/619e/2b35Y/wDeT3yD/wDRx9gf/X/37+sO/f8AR7uv+c0vVv8AWV9nf/CS8sf9y20/61de/wBm9+WP/eT3yD/9HH2B/wDX/wB+/rDv3/R7uv8AnNL17/WV9nf/AAkvLH/cttP+tXXv9m9+Wf8A3k98g/8A0cfYH/1/9+/rDvv/AEe7r/nNL1X/AFk/Zf8A8JLyz/3LbT/rX17/AGb35Y/95PfIP/0cfYH/ANf/AHr+sO+/9Hu6/wCc0vVv9ZX2d/8ACS8sf9y20/61de/2b35Z/wDeT3yE/wDRx9gf/X/3v+sO+/8AR7uv+c0vVf8AWT9l/wDwkvLP/cttP+tfXv8AZvfln/3k98g//Rx9gf8A1/8Afv6w77/0e7r/AJzS9e/1k/Zf/wAJLyz/ANy20/619e/2b35Y/wDeT3yD/wDRx9gf/X/37+sO/f8AR7uv+c0vVv8AWV9nf/CS8sf9y20/61de/wBm9+Wf/eT3yD/9HH2B/wDX/wB+/rDvv/R7uv8AnNL1X/WT9l//AAkvLP8A3LbT/rX17/Zvflj/AN5PfIP/ANHH2B/9f/fv6w79/wBHu6/5zS9W/wBZX2d/8JLyx/3LbT/rV17/AGb35Z/95PfIP/0cfYH/ANf/AH7+sO+/9Hu6/wCc0vVf9ZP2X/8ACS8s/wDcttP+tfXv9m9+Wf8A3k98g/8A0cfYH/1/9+/rDvv/AEe7r/nNL17/AFk/Zf8A8JLyz/3LbT/rX17/AGb35Z/95PfIP/0cfYH/ANf/AH7+sO+/9Hu6/wCc0vXv9ZP2X/8ACS8s/wDcttP+tfXv9m9+Wf8A3k98g/8A0cfYH/1/9+/rDvv/AEe7r/nNL17/AFk/Zf8A8JLyz/3LbT/rX17/AGb35Z/95PfIP/0cfYH/ANf/AH7+sO+/9Hu6/wCc0vXv9ZP2X/8ACS8s/wDcttP+tfXf+zefLP8A7ye+Qf8A6OPsD/6/+9HmHfaH/d3df85petj2T9l6j/mEvLP/AHLbT/rX1cJ/p872/wBDn3/+mvtn77/hjH/SZ97/AKQd1fef6Rv9nv8A7tf3/wDuf4r5f76f3d/3H/xO/wB59j+x5PH6fclfvPePo9X707/6p661/wBE+ppr/wB57ftz1hB/rc+3X9bfC/1vtm8H/X7+j0/QRafof6teJ9FTh9P4v6vgfB4nfSvX/9Aknyv/AOyp/kt/4n/uD/3v9we8M+Yf+Vh3z/npm/6vdfTn7M/9Od9rf/FZ23/tEi6AL2U9SX1737r3XvfuvddfTn6e/de6NP0d8Iflx8kccM30p8f+xN87cdnSLdUGMgwe055I/wDOR0m59zVWFwdc6fkQTyEHj6i3sQbbyrzDu8Pj2O2maz9eHH7eog549+/Zz22vhtfO3uLtVjuuf0SZZpscfGihillg4j4qdGO/4Zy/mUf94wZ3/wBDbq//AOzT2Zf63XOX/Rif/nLH/wBbeo9/4M/7tH/hVIf+ya//AO2XriP5Of8AMp/7xgz/AP6G/WH/ANmfvf8Ardc5f9GNv+csX/W3rX/Bnfdj/wDCmw/9k1//ANsnRYO8vh18pfjVClZ3p0V2F15iJJ1pYdx5TEpX7TlqX/RTruzBVGV24J5CQFR6lXa/APsm3PlnfdpUXG5bYYUPDzH7epO5B98PaX3OuTb8hc+bXf7oP9BBMU3CuIphFKceaxHoDdpbV3DvrdW2dkbRxkub3VvHP4ja+2sNBJTwz5bPZ6uhxuIx0MtZLT0sUtbX1McatJIkalrswHPspt7eW9ura0tBW7nOOpA3vdts2DZ9x33eboQbTZ20008/lBDD+rMf9X2dWD/8M/8A8yjkf7KruoW/7PDq0/7yN8Eexh/re84/9GBv+csX/W3rHX/gzvuyf+FWi/7Jr/8A7ZOuv+Gf/wCZR/3irur/ANDDq3/7OPfv9b3nH/owP/zli/629e/4M77sv/hVov8Asmv/APtl6j1X8oj+ZHSU89VL8U95yR08TzOlLubritqXVFLFYKSk3pNU1EpA4RFZ2PABPun+t5zl5bC//OWLq6/fJ+7OZNC+6liF9TbX/wD2ydEJ3rsfefW258rsrsLae4tj7wwcwp8ztjdeIrsFnMbKwui1OPyEME6RyqbxuFMci+pGYc+wxeWd1t939Jf2pgvOsg+XeYeX+bdntt95a3m23Lapv7CaGYTQ/YacD6g5HnTpLe0vRx0qdkbH3f2Vu7buwOv9t5fd+9d25SDDbb2zgqRq3LZjJVGpo6akp0I+kaNJI7FY4okZ3ZVUkP2Vnd7jd21paWxnvJ+A6JuYuYdj5R2LceZ+ZtxtrLl6y/WnnnP9h/lNTgDJPAZ6Hj5H/DD5OfEh9t/7MH1Nmev6Td4nXbeXkr8Ln8Dk6ukiWesxaZzbmRyuNgzNLA3keklkSfxetVZOfZru3LW+bELZty2/wVnPGtc+mOo+9s/fL2r93xuUftzzgl/c2dPHhWOWKbPCbwZYov0fIzeRxx6K97I+pa66ZgoLMQqqCSxNgAOSSTwAPfuvccdHF6h/l9fNfvjB0+5+q/jX2ZuPbFZCKmg3JW46i2ngsnTsSFnxWU3lX7fpcrCwF1enMiMPoT7EVhydzPucQlttkP0hwK/6q9Qjzf8AeU9iuQ7+TZeavdHabbdkNJIY2lupozkUl+kimERwe2U1wcdDH/wz/wDzKP8AvFTdX/oX9W//AGcezL/W95x/6MDf85Yv+tvQP/4M77sn/hVov+ya/wD+2Trj/wAM/wD8yj/vFTdf/oX9Xf8A2ce6/wCt1ziP+WE//OWL/rb17/gzvuy/+FVh/wCya/8A+2ToCOofg58q++9y9l7Q6c6jr+wNwdPZuDb3Y9JhNz7HWDbWYqavLUMFG2TrtzUeKyhkq8HVxiSinqYrwN6rWJK7Hlnfd2lubWxtjNdwmk39l+zjx6kDnD379pfb3a+U965z5yj22y3q18eyM1tdgXEH6ZqsUURljxJF/a+F0Xje2zN0dcby3V19vfDz7e3lsnP5Ta+6sFVTUtRUYfP4apkosnjaiehnqqKaWjqomQtFLJGSOGI59k95bzWd1cWt1/uZB1JGwb3tnM2xbPzDsNz4+1XltFNDOMieGU+LDTxf1ekx7Z6Nuve/de6ccRh8vuHK4/A7fxOUz2dy9TFRYjCYTH1mVy+UrZjpipcfjMfDUVlbUyN9EjRmP9Pd4IJbiXwo7Yz3fSLctw27arK43Ldb+3s9rh/t5pphDDB9s5wOj87d/lQfzF904qnzOM+J3YtPRVKh4Y8/W7O2rkSjDUrSYfcu58TloAykf5yBD7Fi8hc4zIJDsZFeH9lw/b1j3e/e/wDu2bdcyQXPupYi6UkHwo7qXIwf1Y7WWI/aCa9Pn/DQH8yj/vFTdf8A6F/V3/2ce3f9b3nH/owN/wA5Yv8Arb0i/wCDO+7L/wCFWi/7Jr//ALZOkH2b/LO+dHTOw9z9n9p/H/MbJ2Ds7HnKbl3Nl949bmixlEZ4aWN2io941VbVTVFXUxxRQwRSzTSuqIrMQPaS+5J5o221ub+92tobOAVr4sX/AFt6PuWfvTewXOW/7Zyryr7iRXu/3z6YIBbX+WoTT/cXjQE58h0BtH8Ze8q/qs90Umwq6Xr77SrycWT+/wASuSqcNj4zNXZul261aM7U4ikp1ad5VpyftVaoVTAGkBZHsW7Sbf8AvX6X/E6V/wBkfLobXHu/7dW/N39QpuaUPMVaGARSki4lHhxKZvC8EHxOyhIPifp/2n6fQD/63sp6krhx49e9+691737rY4jq7O3/ABhD6/8Adv3f/wBqF39yvT/Ev/GR/wC1rrAb/ncf/ciP/KX6/9Eknyv/AOyp/kt/4n3uD/3v8/7wz5i/5WDfP+eqb/q919Ofsr/0532s/wClDtv/AGhw9AF7KepL697917r3v3Xuro/5L/wC2z8w+5dydh9u4sZnpDo58NNldtzeQUe/t/ZkzVO39rZHR65tvYyhpHrslEv+fBp4H/amf3JftvytHzFuVxe3yV2iAivCk03214AcfXh1gx9+H7xO6eznJ+3cscoXAi553vxgs2fFsrSI0mnioD+rLXwoT5fqt/aKnVqPz1/nkY7417+zHx0+JfXOy91ZXrKVtp7q3puJamn6821mcUopKvZuydr7bmxZy393Hj+2qZ2qIKKGdDDFHKIy3sdc1+5Mex3lztmx2cDPCMyEjQPMig9Dg/PrEr7vn3D9w90+XbD3G92uYrq027c6zQW0XdeXMMvC5llmEgCyZkWMgysprrXh1XKP+FDvztH/ADDnx/8A/QH3P/8AZuPYL/13OZf+UWz/AOcb/wDW7rJr/k297If9NLzF/wA5rX/rR12f+FDnzt/G2+gP/QG3P/8AZv73/rucw/8AKLZ/843/AOtvWv8Ak2/7If8ATS8w/wDOa1/60dWifAL+cvtD5r7pi+LXyt6w2Vtnd3ZNJV4PbdXQRyZnqvs6R6RmqtlZ3bm5GyFRhc5k6WKQ0kbzVdJXOviUxS+NHHPKfuDZ8y3B2Te7MLfSqQBSsUv+lJr/AKh1in94r7lG/eyG1y+6XtZzRc3WxbayTTJJ2X9jkUmEkPhiZY2PcVCyRYdg4qUrQ+VfwQxHwi/mj/Eg9dU1TT9I9xd89Wbs67oppJar+6GSxvZm2YN2bBFbMWkqKTCz1tNUUBdmkFDVxxuzPEzsCt/5Xj5Z545bksAP3VPcw/l+rkdZP+0Pv7fe9/3UPeGLmm58bnjZdivLe4wAZ4prOUwXFBjuEUiTf8OjMn+idXbfzhP5gfdvwKwvQmT6Yw/X+Yl7NzfYGN3Am/MRlstFBDtjH7cq6B8YMVm8M9O0kuXk8msuGULptbmSef8AmrceVk29tuht2lmElfFJAx4dOBHqa9YQfc5+7pyX94G/5+tecd03OCPbLa0aH6J4UJaZpgdXiRS1FIsUA6o8/wCgiL5zf88Z8ev/AEDt3f8A2c+41/13OYv+Ue0/5xyf9bes6P8Ak277Hf8ATTcw/wDOe1/7ZOnbBf8ACiz5l0GYx1buXrTofcOBp6mOTLYWgwu7cBX5CgB/ymChzJ3Vk0x1a0V/FK9PPGr21Iy3Ht2P3i35ZKTbba0HpX/rb0j3P+7X9oJbC7Taec99iv6foTObaWMnyrEsKsRXjRhjz6sp/nC9XdV/Ln+XTtH5w7Ww0eO3fs7aXXXZm181V00UG4ajrfsSswtDnNi52oiCmtixsu446qNWZ1gqqRzCVE0msX+4lnYb/wAo2nMEdt/jUIinX1pLQEHzIzj7OsY/uY81c0+0H3k939jt0vvF2m+uryymgr+it9ZiYw3cI8q+EYj6xS54Cmm5/j9B/vH+39479dr6Hh59baX8ir4VYXp/rLcPz+7vjo8BXbg2znP9Fk24fFS02y+p6CCWfdnZFY1Soahm3ZDRulPKdLR4eBnF0rD7n32v5ZXbbO55p3OgEw/Qr/oMFOP2mhz6fb1x6+/v753fO3Ne3ewPI58a2tLmE7h4OTd7icQ2Y9fA1CozWY/8K6Ppj9+/HD+dt8Nu59j4BKjATYjd2cwGKbNpTy7k2FvHBVVdVdUdnR08Q80GM3RiClUUsGaknrKFyXjkPsTLdbP7j7DuNorjiQM5iIqYpR9tKj1yOsf59h9zfuPe8/JO/bnHrea0gnYRV8G8trgAXlnXgWhkqh9HWOXgR1o6dn9ab06b7E3p1T2Lh5sBvnr7cWR2xubFTA2gyGOm0GelkItU43IQFKilmW6z00qSKSrD3jPf2N1td/dWF2P8cgOeu8XKHNGxc8ct7Nzfy7dePy5udqJ4D9vD/m7F/ZTDymBHV/P8jD+XjsbuubcPy572wNBuPYXX+45tt9VbRz8ME+3M3vPCQwZDcG9Nx0VXemyWL2h9xDBRwTq1M9aZpJQft1Blb2u5Ttr9hzHudr/ikBpBXgT5zHyI9PIceueP3+PvF77yZHt3svyLuJt97v7Xxr24hJ8ZLeeohtISMhpyDJIQa+F4dKeK/Q5/Lz/hQpktp9hZzYPw/wCuNkbl2ntWvqMJL2p2IMxV4/dFXjZmpaqp2XtXB1+G8G2xLE0dNV1dQz1UY8iwRoUJNd+92WguLiy2K1DRQcZpcLX0Axj518ugF7M/3dEe/wDLljzL7w8xbjZbhdKJvorNIllhU5BuZp0kDytX9RIlJhPxFzUAn3/QRH85/wDnjfj5/wCgdu//AOzn2HP9dvmH/lHs/wDnG/8A1t6mn/k257Kf9NPzD/zntf8Atk6Ru/8A+fn85d+7J3bsr+H9ObQ/vZgMpt990bR2vuSi3TgoctSvR1GR29XVu7a6mocvBBI3gmaGQwyWdRrVSGbj3V5kvLW4tltrWFpQQDU8Dg+fp5no05f/ALvL2P2Dftr31t33i/hsrqGY28z28kNwIjqKzIkMTiEkCpqKjHA9Hs/4TPC03zDF2Y36TJZ2Z3YkdkXZ3cszuzXJYkkk3PsQ+zPxcxHz/R/6y9Ql/efUp7L4FANxA+QH0FAPQDyHDqhX59f9lxfL3/xYztn/AN6/Je4u5r/5WLmL/npl/wCrvWf33ff+nHe0H/itbd/2ix9FK9kPUwdcWOlSdLMQOFRSzsfwqKLlmY8AD6n37Plx69jzNB1uofC744/Hz+Uv8Man5a/Ieho/9MmZ2lityb23DLRQZDdGFn3VFBJtjpTrilqvG1HkZ5KyGmrDC0bVtcZpJ5BSwoI8k+W9m2/kHl5t83ig3IrWY0qVrkRRfy+ZNeuGvvf7l+4H3u/eq29pvbyZ25MgvJYLKAErDIsNfG3G8K/hFGkjLA+FAERB4jnXWX2D/wAKOvlFlty19T1l0/01szZ/nlXEYrdg3NvLcf2nkPglzGWoc5t3GGtaO2tKalSNDwGe2ogq793N3abTt1hbx2vqxqf8nWU/Ln92r7aW+1WsfNfO293G9/6PLbG3itx/zRjeKZjT18WSvGg4BEf9BE/zj/55D49/+gju3/7OR7S/67fMX/KPaf8AOOT/AK29H3/Jtz2U/wCmn5h/5z2v/bJ0T/5k/wA1L5PfOHYWB6x7UOxNubLwu4F3PVYbrvE5fDJuXK0sDwYo7kfJZ7MNXUmEM0ktPCnjQTuJH1MkZUg5j583vmSyO23sYS0JqfBzX0rWvUy+yX3R/a32L5k3Dm3laS9vt5ktjCs189vILaInLQ6Ioqmbg5NSowtATVCYj5wZ/FdHx9UDZdPUZikxCYqh3G2ajiwaVtLtCj68xe8qnbqYX+KTbpxOwaCHGpTrlEw1RJGtXPSSTr7Zh5tki2g7cLTNKf8AVHweH/NLP2549L9w+7vY7j7iLzs/MCnbhd+OIfBIuQPrJL02/i+L4JilvHeV3MXjoo8GKRUNeiKqoRVReFVQoH9AosP94HsIdZJE1JPXL37rXXvfutjiOrstX/GEfp/3b83/ANj/AMOF2t9Pr7lf/iF/4yP/AGtdYDf87j/7kR/5S/X/0iSfK/8A7Kn+S3/ife3/AP3v8/7wz5i/5WDfP+eqb/q919Ofsr/0532s/wClDtn/AGhw9AF7KepL697917r3v3Xutyr/AITn5LD1fw97qwuJmpot20HfOeqMqth9xFFldg7OXbVTOL6vty1FUBL8Xje3vIf2mZZNg3EL/bi5P7fCWn+Xrit/eSW96nvTyTeXgP7ol5bg8H5iO8u/G/48nWoH2DhNzba7A37t3esFZS7ywW9t2YrdtPkBItfFuWg3BkKfOfdiW0pnfJRyMzNy19X5HuAryGWK6ure7/3LhJqPz8+uxfK97s+58s8r7jsJH9Xrmzt5bemB4EkAENKcB8h0kPabo+oPTrv3rrVB6dDr8XMDvDc/yZ+POC6/Wsbe2Q7s6z/u41CzrVU9fSbvxNe1YsicxRY+jpJaiZ7gRwxOxIVSfZrsEVzLv+xJbf7ki7hx8uJ/lx6jn3h3HZ9t9p/cy+5hcLtcfL98JmPAEwECP/TSkiIedeGetvr+cZksIO8P5VWJkeE7hm+ae28nQxh0+5TBUmU2fS5abR+v7d66uoVJ/SXA+tvc/wDP7R/vLkeOv+MHdBT7KGv+Trjn9zW2vn5K+9Vew/8AJKHItxEx8vHljnMGPXTHPQ+Qr69Fe/4UlfwpMT8L3z8OTmwX9+u1jmYsJNSU2alxS4nYn3y4ifIw1WPhrzT38BnjaIS21jTexN7xCBhy4JvhBm/6xV/PqVv7s4XZvfe1tunjTcBY2XhCcF4S1bulUUoxH2SIQK8egb+MH8lf4RfL/q3G9tdKfMPuDN4KqK0mYxNXtfr+l3Ps7OCET1O3N3YZaeSbFZelB/q0FRHaWCSSJlcl2y+3HK+/WK7htO/ztEfhxFWI+jDP8z0Lfc778Hv57P8ANF3yjzz7R7NbXqDtfxb0x3UX4Z7eXxgGVvwuO9OEgBBAMzhf+E5HxiwuYoshvL5Edw5vbtDNHVZfCSQbE2uMpRRtrko5s1DjZ6vGUtQEKSSxBZQt9Dq3qBzF7P7FHL4025XD0PCkYx+zqLr/APvKfdW6sbuy2fkDZLPcph2XCG6lkhPyQyeGafZ6dA3/ADovnn0XhegMb8A/jVmNv55F/ujh+wZ9mVsGT2j19sPr56CpwHXtNlqSSopK7cNZkcPReeKGWT7OkpWWZvLMFCD3G5p2qLal5X2q5XxiB4oizGqRcYa+ROMcRTPQ3+4/7Ac/3vuFdfeD9y9uurOMPO1mLhSLq7u7yomuzCw1JGkUsrBpKLJK6MlVB1U4/wAsr4RZP5x/JXB7MyVNVRdQbFWi3r3RmYtcSLtanrAKHaFNVD0x5nfNdEaOIA646RamcD9nmO+SeWG5l3pbd/8AklQis3+Qfn1ml96n30g9ifbG/wB0tblRzluH+L7XAeLOR+re/wClgGfTxRFF5nq+7+dp3/2L/o6xPwa+LXWe/dxUtRjMIe7q7qzYe5twYnZOyKOkpZ9ldQvUbWxddRYms3HR09PW1dGSjph4oEsYqs+5V9yt3vVsBy3slpcSagPG8CIsAo4RCgwT8vLrn19xf285Zk5ouPff3Y5m260MUkp22PcbuCGa6u27bncSJpAZRa6pFjlyDcFvOI9U4fy09+/Kn4PfJrbfYFX8fvkLL1VvH7XZHc2Dh6c7JlWq2fXVaNBuSnpP7t2mzOyMgwr6e1nkgFRApHnPuPOSbzfOW96t522qf6G5oJ/0pcelMUx5dZp/el2P2l98/a2/2eP3J5fPOdiDPtUo3Cz/AE5Kd1sf1v7O4FIpPSTRJwjPVun8+r4KQdi7HoPnF1PiTU7k2Phcdju6KOgpHSo3H1tpQYHfTUxjSaTI7G84hrGdfJ/CZgzWWj9j73R5XF5apzHY29buIaZ/KsOaN9sXn8q14dYef3fvv+eV+Ym9jua7/TsW4XBawJNfBvPx2takCK74imPGGK+J0PH8uGGr3b/JAzW3eqiX35N1T8pNswQ40/7kD2FWZPsGShgTxAuMlVU+RovFxqs8f149mvKKSTe2Ucdgf8c+ln/5y1kx+2g/PoCfeZa02f781vuXNwA5eXdNikNeH0ccNn4hz5fpyV+zrSfhXRFHGUePxoqNHIrRyRNGNDRyRsAySIylSDyCCD7xq+AUPXccSxyR+LE5Ir/h9Pt6ye/db6979QdeoBWg8utp/wD4TPf5/wCYf+v0p/8ANJ9zj7N/2vMX2Q/9ZOuUX959w9mfs3L/ALUOqFvn1/2XF8vP/FjO2f8A3r8n7i7mf/lZt6/56Jv+rvWf33f/APpxXs//AOK1t/8A2ix9FJ9h/qX+lRsepxtFvrYtbmjGMLR732fWZkzDVF/CKXcmMnyflUghohQRyagfqtx7UWDwx3lpLN8Oof4eiXmWC8uuW+Y7fbcX0tjc+B/zX8A0/Yevok/NzsH4j7A6Vxe9vmJtbC7y6Vj3hgY6Q5frut7QwFDuPK0mRh2zl6rDY7GZj7FJYZ5IIK1ohGslQsYcGVQcvOZbvYbTbTPvsSPYY+KNpACfkAf59fNx7J7J7vb5zw+0+zd7eW3PZtZ9QhuVtZ5II6GeMSO8QpULI0ddREdaHQeqmf8AZzf+E+X/AD6fqI/63xOzf/2D+wF++var+Cxp/wA8zf8AQHWXX+tL/eHgAfvXmKn/AEt4/wDtp66/2cz/AIT4/wDPpOo/9j8Tc3/9g3v3779qv992X/ZM3/QHXv8AWm/vDv8Ao68xf9zeL/tp6p7/AJpHyf8Ag72rHsPrn4NdLdZ7S2pRM26ewezcF1DR9ebmy+YU1NFh9lYpqvD4vPQYOhhZ6yvksI6ueSCNbrC+qPOeN35bu47Ox5WsLVYOJYRmL8sgcPsz1mh90z2v9+eXW5i5m99OdN2m3hx4Fjt1zfG6SOM/29yw8Voi8gHhRCtY+4sAXXqnn3HnWa/Xveuvde9+691737rY4jq7O/8AxhD/AM1+7f8AtQu3uV/+IX/jI/8Aa11gN/zuP/uRH/lL9f/TJL8r/wDsqf5Kf+J87g/97/cHvDPmL/lYd9/56pv+r3X06ezH/Tova7/xWNt/7RIugB9lPUlde9+691737r3Vmn8rX5/VHwK71q8zuakyeb6S7Npcft7tfCYm8+SxyUFRNLgd94KhdljrcttiSrmWWmuHq6GoljU+QREDfkXm1uWd1JuB/iVz/bf0SMAj7OsVPvY/d2i+8ByFDDs86rzvs4MtlLN2iRGzPbSmnbFKRVD/AKHMqE9rHrYy+Rv8s34SfzRTD8luhe4qXau9N2UlJJnN+9XDD7p21u2WKmSCCbfuxqyooKzHbrp4IVhllEmOrf2wtSkjKCJg3jk7lvnZhvFhuYSY8WiIZX9PFj41+0g9c0PbP7z/AL5fdVB9tOduT/q9ktSfCsb8SxSQ5yLW6SuqCtaD9SGpqpp0Tj/oGfm5v8v3+p/5own/ABHYf9PYb/1nYD/y3pP+cP8As9TkP7ze6/8ACPQf9lz/APWrrv8A6BoJeP8AnMCQC4uR0vETb82B7DPP9Pfv9Z2D/o/Sf84v9nr3/Jze7zT2fgr/AM9z/wDWro6vx/8Agp8FP5Q+HyvyJ7k7bp892HRYiuo6DsXsd8TjKzG0tVE0NZhuqOusXJVV0mczSAwO8RyOQljLRrJHE0ikT7TyvyvyLEdzvLvXOK/qTYYU8oo6VJ+ypp8uoH9wvfz38++Fe2nt3ypyq8WwSXClrKxMkqSNkrLe3T4CRj+MpEp7gpenVC/aHzgzvzy/mj/GTspaCv2/1ztfvnpvZvUW0q4xGvxm1IuzcLW1GWzKU7PANx7ryDmpqlRnWCMQ04ZxCGaKtx5lfmjnjZLmlLFLmHwPn+rQn7T59dCOUfYSy9gPupe63LjTpLzbd7HuE+4TDg0y2coWOE8WhthWKM+bl5MCQDqzf/hTECNpfD482O7e4Re3F/4Hsg2/1wD7GXvGP0NkP/Nb/rF1jL/djCu8+8eP+Im2/wDV65611fij8uO6vhp2nQ9p9L7gNDVHwUe7NpZJ559n9gbfjlEk23914qORFqIiC321VHoq6GU+SFx6laI+XeYNw5Zv2vLGcGM8R+E/aOHXRv3j9m+Rfe7lKXlTnWzLSIK2t0APqLeY/wCiwycFJ8427X+GQac9bbsVb8Pf57HxweCkymU607x2TjSKqnosho7E6iztamh0q6KGpoqbsHqzNVkY5dDS1KfmkrFOifVOwe5my/ozvBuUeMGk0LehApWM8ATg/b1x1uLH3j+4h7of4zYW+48nXwHe0avZbhbipADsG8C7iFdag6ozgeJGSTqhfJT4MfI34rd047onf2wsjk9ybqzNPh+rcxtShrMjtntk5GuhoMRJsitECmorqyrq4knoJQlbQyyaZkClXeCd65V3nY90j2q5tTM8h/Tp/o5+Xz9fP1669e2Pv97Ye63It1z/AMv8xpb2ljbGbcY5yFmsQoytwvBY0p+nN8EwAKnV2Dba6y2n1l/JP/lwZfdu9Icdl+2Kylp89u5IJUWfsrvbc9EafbOxcZUqVnl27tlUFKjA6YsfRVVZYNI958soNv8AbnlNp7gr9TSr+s05GFH58Plnrj3zXunNP34fvLW+2bQ1xFy2HMcNQSLLbICDLcsMASS5cjzlkSHI09a1vwz/AJqPeHxX+QvbPee6IavuGk76myOW7c2XkNwT4Glzu63qJazA7nxVaKTKQ4iu235pKKFBTujYuQ0/ASIpDfLvPm47Ju93ulypuEuTWYV4HyIrWhHl10297Pukche6ntvylyJsUsOx32wAJY3BhMwjtydFxBLpKmVJX/UDBv8Acgl60Jra/wD9BL8v/eID/wDo44v/ALA/r7HX+vJbf9GCX/nKv+brEz/k2HuX/hYLX/shf/to6PZ8Bv5vXWv8wbsPePx93x1DTdW57LbLyFft3CZbddLvPDdmYdIZ6Xeu3GikwOGVKyiw9R9w1KyzCqojO3HhYMKOVefrDmy8vtpl29oGAOHyJRTIXA8uPrw6gD7wf3PObvu6cubJ7hbbzd+9NrW8AeWGB7eaycUaCZx4kpAM" offset="0" />
+        <chunk data="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" offset="30000" />
+      </image>
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1c9777d" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="35328cb8-9b3d-4a21-9e87-8b8ca843de80" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Memory Usage" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="5" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="StackedAreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="kilobytes" id="f0b54b25-e6ea-4e75-a353-b43c4c10a3e7" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Free Memory" sourcecolor="RGB(64,64,128,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="kilobytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Memory" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Free Memory" metrickeyid="Free Memory" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="1f066357-6f2a-3253-a8fa-7f8987587046" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Free Memory" sourcecolor="RGB(64,64,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Memory" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Free Memory" metrickeyid="Free Memory" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="kilobytes" id="5eca0bb4-55ca-4627-9223-a3a137fa935b" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="false" name="Used Memory" sourcecolor="RGB(128,0,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="kilobytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Memory" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Used Memory" metrickeyid="Used Memory" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="0880f09d-63a1-3fc9-b199-5580fbff395d" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Used Memory" sourcecolor="RGB(128,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Memory" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Used Memory" metrickeyid="Used Memory" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="fbd0803a-a2c6-3e03-b938-bfdbfbdc2cf3" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Free Memory" sourcecolor="RGB(64,64,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Memory" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Free Memory" metrickeyid="Free Memory" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="c7c8c880-bfe9-3a4d-a2f4-a8b4dd14902d" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Used Memory" sourcecolor="RGB(128,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Memory" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Used Memory" metrickeyid="Used Memory" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="false" id="6197c30c-bf2a-3488-9298-adc92b7f01f5" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Free Memory" sourcecolor="RGB(192,192,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Free Memory" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Free Memory" metrickeyid="Free Memory" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="false" id="dfe023a8-f6e3-3b52-a84a-6609a4a54bdd" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Used Memory" sourcecolor="RGB(192,128,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Used Memory" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Used Memory" metrickeyid="Used Memory" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@13c238b" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="236cc404-5f05-4fd9-b4de-207e8aa8db67" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Processes Running / Blocked / Run Queue" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="15" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="9770c765-1920-4a59-bdf1-aa347831b4ca" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Process Count" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Process Count" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Process Count" metrickeyid="Process Count" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="fb1053d8-199b-37ce-b9a7-eb65e9e19689" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Process Count" sourcecolor="RGB(0,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Process Count" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Process Count" metrickeyid="Process Count" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="c75fe663-46d3-4da6-81e4-dca8309c07e2" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="false" name="Blocked" sourcecolor="RGB(192,192,128,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Blocked" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Blocked" metrickeyid="Blocked" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="56f2aacb-50e7-30b4-9d6d-9fa1ad560394" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Blocked" sourcecolor="RGB(192,192,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Blocked" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Blocked" metrickeyid="Blocked" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="d7ef416b-d779-455e-b983-2ee30862c2fd" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="false" name="Run Queue, current" sourcecolor="RGB(0,0,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Run Queue, current" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Run Queue, current" metrickeyid="Run Queue, current" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="41d539c1-c1b1-3322-87bf-579d596a5689" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Run Queue, current" sourcecolor="RGB(0,0,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Run Queue, current" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Run Queue, current" metrickeyid="Run Queue, current" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="2b636388-c4d5-3fe0-90a1-1f6f06f48739" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Process Count" sourcecolor="RGB(0,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Process Count" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Process Count" metrickeyid="Process Count" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="1d3a4aa6-0ede-3483-b0bd-94860bca783a" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Blocked" sourcecolor="RGB(192,192,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Blocked" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Blocked" metrickeyid="Blocked" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="3f95e7e6-ece2-310b-8556-500bc84c5ceb" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Run Queue, current" sourcecolor="RGB(0,0,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Run Queue, current" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Run Queue, current" metrickeyid="Run Queue, current" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="false" id="838ee3eb-be24-3a88-82db-4fd50a1e4a7b" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Process Count" sourcecolor="RGB(192,192,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Process Count" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Process Count" metrickeyid="Process Count" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="false" id="c58f29e3-a48a-3a6b-a370-5b458b01f471" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Blocked" sourcecolor="RGB(101,142,15,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Blocked" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Blocked" metrickeyid="Blocked" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="false" id="2b183c26-0ab6-39fe-9f06-d8aa068d233d" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Run Queue, current" sourcecolor="RGB(0,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Run Queue, current" metricgroupkey="Unix Process" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Run Queue, current" metrickeyid="Run Queue, current" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@187a5a0" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="ce258514-ae00-4c64-9046-50183068f1db" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Network Packets Dropped &amp; Errors" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="13" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="b1e4b4f9-b416-4f9e-bc9d-1df1cc8d0715" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Received Packets Dropped" sourcecolor="RGB(64,128,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Packets Dropped" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Received Packets Dropped" metrickeyid="Received Packets Dropped" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="fac90d88-04c9-4fe6-9d23-0a4d96bc5c90" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Transmitted Packets Dropped" sourcecolor="RGB(192,0,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Packets Dropped" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Transmitted Packets Dropped" metrickeyid="Transmitted Packets Dropped" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="0a963d8a-1b0b-386d-b4ec-4b412f79fecd" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Received Packets Dropped" sourcecolor="RGB(64,128,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Packets Dropped" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Received Packets Dropped" metrickeyid="Received Packets Dropped" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="ceb11045-96a9-336b-bb8d-c06d474cc4ba" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Transmitted Packets Dropped" sourcecolor="RGB(192,0,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Packets Dropped" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Transmitted Packets Dropped" metrickeyid="Transmitted Packets Dropped" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="3" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="512ffae4-b993-48d1-bf11-e8bda1bc6097" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Received Packets Error" sourcecolor="RGB(128,64,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Packets Error" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Received Packets Error" metrickeyid="Received Packets Error" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="number" id="fbc7797c-554b-42ed-98ba-759dd8c73779" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Transmitted Packets Error" sourcecolor="RGB(0,0,0,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="number" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Packets Error" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Transmitted Packets Error" metrickeyid="Transmitted Packets Error" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="a89953cf-f54c-3233-9139-b9343851d926" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Received Packets Error" sourcecolor="RGB(128,64,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Packets Error" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Received Packets Error" metrickeyid="Received Packets Error" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="e541e126-8b84-3014-a145-3dd56096334a" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Transmitted Packets Error" sourcecolor="RGB(0,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Packets Error" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Transmitted Packets Error" metrickeyid="Transmitted Packets Error" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="8beb1255-ad57-3c82-8009-041613c0142c" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Received Packets Dropped" sourcecolor="RGB(64,128,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Packets Dropped" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Received Packets Dropped" metrickeyid="Received Packets Dropped" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="38ead501-f44f-3f87-b125-6a63f5913f99" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Transmitted Packets Dropped" sourcecolor="RGB(192,0,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Packets Dropped" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Transmitted Packets Dropped" metrickeyid="Transmitted Packets Dropped" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="2e69451b-8e58-31a8-a798-88ba3ac826f3" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Received Packets Error" sourcecolor="RGB(128,64,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Packets Error" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Received Packets Error" metrickeyid="Received Packets Error" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="true" id="6b6bdffe-c59e-3c52-ba56-e4c5f1d5d180" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Transmitted Packets Error" sourcecolor="RGB(0,0,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Packets Error" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Transmitted Packets Error" metrickeyid="Transmitted Packets Error" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="false" id="99d669eb-47fc-3865-be74-d1f5186097d4" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Received Packets Error" sourcecolor="RGB(64,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Packets Error" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Received Packets Error" metrickeyid="Received Packets Error" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="number" fetchmeasurecolor="false" id="83d58a24-12db-3256-b42e-f43b5d9e0398" displayrate="10s" unit="number" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Transmitted Packets Error" sourcecolor="RGB(64,128,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Packets Error" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Transmitted Packets Error" metrickeyid="Transmitted Packets Error" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="number" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@b6fffd" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="ef0168a1-e1cf-4f49-be1c-2f0b74542a24" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Network Bandwidth" typeid="com.dynatrace.diagnostics.portlets.chart.Incident" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="19" />
+      <filter>
+        <criterion type="btm" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <table drawcolumn="-1" name="The Incidents table" sortcolumn="2" structuremode="hierarchicalincident" columnorder="0,1,2,3,4,5,6,7">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="20" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="120" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="120" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="60" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="120" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="120" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="IncidentTrafficLight" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="false" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="-2147483648" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Oracle WebLogic" id="835c6104-c1a6-4bab-8bd3-0b82ea6873b7" displayrate="10s" systemid="Oracle WebLogic" overridesource="false" name="Network Bandwidth" sourcetype="INCIDENT_RULE" autoscale="true">
+            <incidentrule id="Network Bandwidth" flags="1" incidentdashboardname="Incident Dashboard" description="The available network bandwidth is continuously low. Too much traffic on the host.">
+              <sensitivity id="after60s" duration="60" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+      </datamodelconfig>
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@e9325e" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="284cfcd1-4293-4ba9-b4e9-ab8df5e36c3c" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="CPU Usage" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="3" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="StackedAreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="percent" id="e70f4b5b-fffc-477e-aa57-9a62cf2fb85a" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="false" name="User Time" sourcecolor="RGB(0,128,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="percent" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="User Time" metricgroupkey="Unix CPU Usage" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="User Time" metrickeyid="User Time" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="percent" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="percent" id="b4d89e08-9404-4fab-8a67-a94b72dddd4e" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="System Time" sourcecolor="RGB(0,0,64,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="percent" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="System Time" metricgroupkey="Unix CPU Usage" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="System Time" metrickeyid="System Time" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="percent" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="percent" fetchmeasurecolor="true" id="f7b4b49f-b37c-355e-bc5c-1d02f76a52f2" displayrate="10s" unit="percent" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="User Time" sourcecolor="RGB(0,128,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="User Time" metricgroupkey="Unix CPU Usage" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="User Time" metrickeyid="User Time" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="percent" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="percent" fetchmeasurecolor="true" id="b667df41-0b46-3377-8dfb-cecf6180cfa7" displayrate="10s" unit="percent" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="System Time" sourcecolor="RGB(0,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="System Time" metricgroupkey="Unix CPU Usage" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="System Time" metrickeyid="System Time" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="percent" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="percent" fetchmeasurecolor="true" id="2d6c76cd-6c56-39f1-9402-1e57f7ce2952" displayrate="10s" unit="percent" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="User Time" sourcecolor="RGB(0,128,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="User Time" metricgroupkey="Unix CPU Usage" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="User Time" metrickeyid="User Time" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="percent" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="percent" fetchmeasurecolor="true" id="c11e7a64-82c7-3a15-bc50-f200ce487cfc" displayrate="10s" unit="percent" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="System Time" sourcecolor="RGB(0,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="System Time" metricgroupkey="Unix CPU Usage" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="System Time" metrickeyid="System Time" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="percent" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="percent" fetchmeasurecolor="false" id="9164a7ad-004c-3c25-8eab-792ba9543cb4" displayrate="10s" unit="percent" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="User Time" sourcecolor="RGB(0,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="User Time" metricgroupkey="Unix CPU Usage" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="User Time" metrickeyid="User Time" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="percent" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="percent" fetchmeasurecolor="false" id="e28aa06a-ba7b-3929-b3d7-37a096868d3d" displayrate="10s" unit="percent" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="System Time" sourcecolor="RGB(101,142,15,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="System Time" metricgroupkey="Unix CPU Usage" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="System Time" metrickeyid="System Time" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="percent" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1ef6095" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="b80fde54-0981-464e-b453-423ded33c26a" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Pages I/O" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="12" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="kilobytes" id="bfb5e277-1e4d-4309-ac89-67ed2617a3ee" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Pages Input" sourcecolor="RGB(0,64,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="kilobytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Pages Input" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Pages Input" metrickeyid="Pages Input" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="kilobytes" id="d4639a3a-2ca4-4f8d-a5c6-433152a0bf7f" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Pages Ouput" sourcecolor="RGB(0,128,128,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="kilobytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Pages Ouput" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Pages Ouput" metrickeyid="Pages Ouput" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="a2422c08-02e3-3be5-b996-0c4786e7c5fe" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Pages Input" sourcecolor="RGB(0,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Pages Input" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Pages Input" metrickeyid="Pages Input" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="622a61ca-911c-3ffc-933d-9bab3a4bddb0" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Pages Ouput" sourcecolor="RGB(0,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Pages Ouput" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Pages Ouput" metrickeyid="Pages Ouput" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="5dc1b0a3-f86d-32eb-bcfd-1b5b430abf84" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Pages Input" sourcecolor="RGB(0,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Pages Input" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Pages Input" metrickeyid="Pages Input" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="true" id="80f3bef6-6940-3830-8d54-7707bbe7532d" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="false" rate="10s" ratesupported="false" name="Pages Ouput" sourcecolor="RGB(0,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Pages Ouput" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Pages Ouput" metrickeyid="Pages Ouput" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="false" id="151c59d8-7af8-3217-b302-d9907f1e17b7" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Pages Input" sourcecolor="RGB(170,98,0,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Pages Input" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Pages Input" metrickeyid="Pages Input" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="kilobytes" fetchmeasurecolor="false" id="f68af936-c3a2-3e28-8376-de539dbc17e4" displayrate="10s" unit="kilobytes" systemid="Oracle WebLogic" overridesource="true" rate="10s" ratesupported="false" name="Pages Ouput" sourcecolor="RGB(189,4,9,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Pages Ouput" metricgroupkey="Unix Memory" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Pages Ouput" metrickeyid="Pages Ouput" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="kilobytes" monitorscheduleid="Unix Monitor" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@ada1c9" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="2821623c-0a86-4d64-b4b8-2a3b77a98fe5" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Network Received / Transmitted Bytes" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="8" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="megabytes" id="5837066f-7078-495e-b93d-40b81247ab65" fetchmeasurecolor="true" overridesource="false" rate="s" ratesupported="true" name="Transmitted Bytes/sec" sourcecolor="RGB(128,192,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="megabytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Transmitted Bytes/sec" metrickeyid="Transmitted Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" aggregationtype="Avg" colorinheritancemode="parent" uiunit="megabytes" id="a8801f14-b581-4ce5-9e0d-41a97851fb95" fetchmeasurecolor="true" overridesource="false" rate="s" ratesupported="true" name="Received Bytes/sec" sourcecolor="RGB(128,128,128,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Oracle WebLogic" displayrate="10s" systemid="Oracle WebLogic" unit="megabytes" measuretype="MonitorMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="" parentkeyid="Received Bytes/sec" metrickeyid="Received Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="&lt;all-hosts&gt;" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="megabytes" fetchmeasurecolor="true" id="42670a23-4a94-38d2-93ec-d6c630aa3895" displayrate="10s" unit="megabytes" systemid="Oracle WebLogic" overridesource="false" rate="s" ratesupported="true" name="Transmitted Bytes/sec" sourcecolor="RGB(0,64,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.30" parentkeyid="Transmitted Bytes/sec" metrickeyid="Transmitted Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.30" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="megabytes" fetchmeasurecolor="true" id="9c20666e-8237-3095-8a71-5790cd18920d" displayrate="10s" unit="megabytes" systemid="Oracle WebLogic" overridesource="false" rate="s" ratesupported="true" name="Received Bytes/sec" sourcecolor="RGB(192,0,64,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.30" parentkeyid="Received Bytes/sec" metrickeyid="Received Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.30" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="bytes" fetchmeasurecolor="true" id="6ffa75c2-f6b6-3075-be7f-4459c59351b2" displayrate="10s" unit="bytes" systemid="Oracle WebLogic" overridesource="false" rate="s" ratesupported="true" name="Transmitted Bytes/sec" sourcecolor="RGB(128,192,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="dm800" parentkeyid="Transmitted Bytes/sec" metrickeyid="Transmitted Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="dm800" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="bytes" fetchmeasurecolor="true" id="9b1862de-0975-39d9-aabf-2abd37d0a928" displayrate="10s" unit="bytes" systemid="Oracle WebLogic" overridesource="false" rate="s" ratesupported="true" name="Received Bytes/sec" sourcecolor="RGB(128,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="dm800" parentkeyid="Received Bytes/sec" metrickeyid="Received Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="dm800" monitordetails="Unix Monitor" measureunit="bytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="megabytes" fetchmeasurecolor="true" id="bf5ed1eb-eccd-3fa1-a380-55228335e7d2" displayrate="10s" unit="megabytes" systemid="Oracle WebLogic" overridesource="false" rate="s" ratesupported="true" name="Transmitted Bytes/sec" sourcecolor="RGB(128,192,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Transmitted Bytes/sec" metrickeyid="Transmitted Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="megabytes" fetchmeasurecolor="true" id="40db474f-161f-30c9-8a86-1affb7c2206f" displayrate="10s" unit="megabytes" systemid="Oracle WebLogic" overridesource="false" rate="s" ratesupported="true" name="Received Bytes/sec" sourcecolor="RGB(128,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="linux" parentkeyid="Received Bytes/sec" metrickeyid="Received Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="linux" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="megabytes" fetchmeasurecolor="true" id="af6f57d3-92c2-367c-825d-5d2f8921276a" displayrate="10s" unit="megabytes" systemid="Oracle WebLogic" overridesource="false" rate="s" ratesupported="true" name="Transmitted Bytes/sec" sourcecolor="RGB(128,192,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Transmitted Bytes/sec" metrickeyid="Transmitted Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="megabytes" fetchmeasurecolor="true" id="86dc6e63-f8ad-3345-b62f-b9e6aa8beb3a" displayrate="10s" unit="megabytes" systemid="Oracle WebLogic" overridesource="false" rate="s" ratesupported="true" name="Received Bytes/sec" sourcecolor="RGB(128,128,128,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.14" parentkeyid="Received Bytes/sec" metrickeyid="Received Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.14" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="megabytes" fetchmeasurecolor="false" id="d7cea49d-746c-39f2-8ea8-9da8a52a1ca0" displayrate="10s" unit="megabytes" systemid="Oracle WebLogic" overridesource="true" rate="s" ratesupported="true" name="Transmitted Bytes/sec" sourcecolor="RGB(64,64,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Transmitted Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Transmitted Bytes/sec" metrickeyid="Transmitted Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" dynamicconfig="true" aggregationtype="Avg" autounit="false" sessionid="Oracle WebLogic" uiunit="megabytes" fetchmeasurecolor="false" id="a5eaee2c-3d5f-3723-b61f-3d54221f595d" displayrate="10s" unit="megabytes" systemid="Oracle WebLogic" overridesource="true" rate="s" ratesupported="true" name="Received Bytes/sec" sourcecolor="RGB(64,128,192,255)" measuretype="MonitorMeasure" sourcetype="MEASURE" fetchthreshold="false" fetch.dynamic.measures="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Received Bytes/sec" metricgroupkey="Unix Network" collector="" systemid="Oracle WebLogic" agenthost="192.168.1.101" parentkeyid="Received Bytes/sec" metrickeyid="Received Bytes/sec" agentname="Unix Monitor" />
+            <displaysourceinfo monitorhost="192.168.1.101" monitordetails="Unix Monitor" measureunit="megabytes" monitorscheduleid="Unix Monitor" measurerate="sec" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" name="The Measure table" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="150" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="false" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1e973e9" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="85f6d569-574b-4f9e-92b7-af0a9b841cce" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Memory Utilization" typeid="com.dynatrace.diagnostics.portlets.chart.Incident" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="17" />
+      <filter>
+        <criterion type="btm" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <table drawcolumn="-1" name="The Incidents table" sortcolumn="2" structuremode="hierarchicalincident" columnorder="0,1,2,3,4,5,6,7">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="306" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="20" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="120" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="120" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="60" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="120" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="120" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="IncidentTrafficLight" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="false" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="-2147483648" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Oracle WebLogic" id="574c2d65-0e07-465d-bea3-98c349d7b38f" displayrate="10s" systemid="Oracle WebLogic" overridesource="false" name="Low Total Memory" sourcetype="INCIDENT_RULE" autoscale="true">
+            <incidentrule id="Low Total Memory" flags="1" incidentdashboardname="Incident Dashboard" description="the available total memory of the host is low">
+              <sensitivity id="immediate" duration="0" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource position="2" scale="-2147483648" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Oracle WebLogic" id="3a008efe-8b4d-42df-b99a-0c827050ec51" displayrate="10s" systemid="Oracle WebLogic" overridesource="false" name="Low Physical Memory" sourcetype="INCIDENT_RULE" autoscale="true">
+            <incidentrule id="Low Physical Memory" flags="1" incidentdashboardname="Incident Dashboard" description="The physically available memory is low">
+              <sensitivity id="immediate" duration="0" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+      </datamodelconfig>
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="55967383-cf8a-4c3f-a9a8-7c7642664be1" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="46a1adc9-3b2f-4f12-96ec-747767f3ed5e" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="CPU Usage" typeid="com.dynatrace.diagnostics.portlets.chart.Incident" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="16" />
+      <filter>
+        <criterion type="btm" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <table drawcolumn="-1" name="The Incidents table" sortcolumn="2" structuremode="hierarchicalincident" columnorder="0,1,2,3,4,5,6,7">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="232" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="20" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="120" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="120" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="60" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="120" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="120" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="IncidentTrafficLight" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="false" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="-2147483648" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Oracle WebLogic" id="d3a5e52b-3b3e-4af1-a120-4fd17c13958a" displayrate="10s" systemid="Oracle WebLogic" overridesource="false" name="Excessive CPU" sourcetype="INCIDENT_RULE" autoscale="true">
+            <incidentrule id="Excessive CPU" flags="3" incidentdashboardname="Incident Dashboard" description="The host in question consumes an excessive amount of CPU time">
+              <sensitivity id="after60s" duration="60" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="warning" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource position="2" scale="-2147483648" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Oracle WebLogic" id="4270c9e4-01b6-4edc-9897-260645f99c5d" displayrate="10s" systemid="Oracle WebLogic" overridesource="false" name="Excessive System CPU Time" sourcetype="INCIDENT_RULE" autoscale="true">
+            <incidentrule id="Excessive System CPU Time" flags="1" incidentdashboardname="Incident Dashboard" description="Too much System CPU time indicates a problem at the machine like too much swapping.">
+              <sensitivity id="after60s" duration="60" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+      </datamodelconfig>
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@1a035f0" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Oracle WebLogic" bgcolor="236,233,216,255" id="d198d44b-cbc3-4495-88f7-9050118fe4c1" addfilterinfo="false" source="server://goller" description="" lastvalue="false" name="Disk Space" typeid="com.dynatrace.diagnostics.portlets.chart.Incident" ismaster="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="18" />
+      <filter>
+        <criterion type="btm" />
+        <criterion type="timeframe">
+          <timeframe start="0" type="Auto" end="9223372036854775807" />
+        </criterion>
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <table drawcolumn="-1" name="The Incidents table" sortcolumn="2" structuremode="hierarchicalincident" columnorder="0,1,2,3,4,5,6,7">
+          <column index="0" sort="None" forcevisible="false" hidden="false" width="243" />
+          <column index="1" sort="None" forcevisible="false" hidden="false" width="102" />
+          <column index="2" sort="Up" forcevisible="false" hidden="false" width="120" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="120" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="60" />
+          <column index="5" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="120" />
+          <column index="7" sort="None" forcevisible="false" hidden="false" width="120" />
+        </table>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" charttype="IncidentTrafficLight" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="false" axis.y.show="true" subchartweights="200" orientation="Horizontal" axis.y.title="" axis.y.title.show="false" limititems="false" axis.x.show="true" valuestyle="2" axis.x.title.show="false" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition min="false" aggregationfromseries="false" scale="false" host="false" max="false" measure="true" count="false" last="false" sum="false" agent="false" aggregation="false" unit="false" avg="false" />
+          <chartsource position="1" scale="-2147483648" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Oracle WebLogic" id="ca9a7481-dadb-40d6-b99d-45ee11908a58" displayrate="10s" systemid="Oracle WebLogic" overridesource="false" name="Low system disk space" sourcetype="INCIDENT_RULE" autoscale="true">
+            <incidentrule id="Low system disk space" flags="1" incidentdashboardname="Incident Dashboard" description="Diskspace needed for stable operations is low (var space, temp space">
+              <sensitivity id="immediate" duration="0" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource position="2" scale="-2147483648" visible="true" sessiontype="live" dynamicconfig="false" sessionid="Oracle WebLogic" id="1775b1ba-c109-47ef-aa12-a8bfab8529fa" displayrate="10s" systemid="Oracle WebLogic" overridesource="false" name="Low Root Disk space" sourcetype="INCIDENT_RULE" autoscale="true">
+            <incidentrule id="Low Root Disk space" flags="1" incidentdashboardname="Incident Dashboard" description="the root disk is nearly out of free space">
+              <sensitivity id="immediate" duration="0" minnonviolatedperiod="60" delay="0" />
+              <actions>
+                <actionref bundleversion="0.0.0" rolekey="com.dynatrace.diagnostics.logging" smartalert="false" severity="severe" type="Logging Notification" refaction="com.dynatrace.diagnostics.logging" key="com.dynatrace.diagnostics.logging" execution="begin" roletype="1" />
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+      </datamodelconfig>
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
