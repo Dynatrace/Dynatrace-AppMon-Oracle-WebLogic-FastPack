@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-Vendor: dynaTrace
+Bundle-ClassPath: .
+Bundle-Version: 1.0.0.0
+Bundle-Name: Oracle WebLogic Extended
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.dynatrace.oracle.weblogic.extended;singleton:
+ =true
+

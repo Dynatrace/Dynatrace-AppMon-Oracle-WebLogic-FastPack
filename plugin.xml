@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by dynaTrace Client 3.2.0 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.agentmetricgroup" id="com.dynatrace.weblogic.extended" name="WebLogic Extended">
+    <jmxpmiperfmonmetricgroupconfig defaultmetriciconname="appserv.gif" metricgroupiconname="lense.gif" defaultmetrictype="appserver">
+      <mbean domain="com.bea">
+        <attribute metricname="EJB Cache Access Count" unit="number" measuredescription="Access attempt to a Bean in cache." attributename="CacheAccessCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="EJBCacheRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="EJB Cache Miss Count" unit="number" measuredescription="Count of failed attempts to access a Bean from the cache. The count of successful attempts is the difference between &quot;EJB Cache Access Count&quot; and &quot;EJB Cache Miss Count&quot;." attributename="CacheMissCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="EJBCacheRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="Open Sessions Count" unit="number" measuredescription="Count of current open Sessions." attributename="OpenSessionsCurrentCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="WebAppComponentRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="Session High Count" unit="number" measuredescription="Highest count of open Sessions." attributename="OpenSessionsHighCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="WebAppComponentRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="Session Servlet Pool Size" unit="number" measuredescription="Shows the Session Pool Size configured in &quot;weblogic.xml&quot; ." attributename="SingleThreadedServletPoolSize" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="WebAppComponentRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Runtime Current Connections" unit="number" measuredescription="Connection count." attributename="ConnectionsCurrentCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Consumer Pending Bytes" unit="bytes" measuredescription="Count of unprocessed Bytes for this consumer (uncommited und unacknowledged)." attributename="BytesPendingCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSConsumerRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Consumer Received Bytes" unit="bytes" measuredescription="Bytes which this consumer has received since the last reset." attributename="BytesReceivedCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSConsumerRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Consumer Pending Messages" unit="number" measuredescription="Count of messages which are not yet processed (uncommited and unacknowledged) by this consumer." attributename="MessagesPendingCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSConsumerRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Destination Current Bytes" unit="bytes" measuredescription="Bytes stored in this destination. This does not include &quot;pending&quot; Bytes." attributename="BytesCurrentCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSDestinationRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Destination Pending Bytes" unit="bytes" measuredescription="Count of unprocessed Bytes stored in the destination. This Byte count is higher than &quot;Current Bytes&quot;." attributename="BytesPendingCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSDestinationRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Destination Received Bytes" unit="bytes" measuredescription="Count of Bytes which are received by this destination since the last reset.&#xD;&#xA;" attributename="BytesReceivedCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSDestinationRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Destination Current Messages" unit="number" measuredescription="Count of current messages in this destination. This does not include &quot;pending&quot; messages." attributename="MessagesCurrentCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSDestinationRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Destination Pending Messages" unit="number" measuredescription="Count of pending messages be executed on the destination. A &quot;pending&quot; message is either sent by a transaction and not yet &quot;commited&quot; or the message was received and is not yet &quot;commited&quot; or &quot;acknowledged&quot;." attributename="MessagesPendingCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSDestinationRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Destination Received Messages" unit="number" measuredescription="Count of messages for this destination since the last reset." attributename="MessagesReceivedCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSDestinationRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Destination Message Threshold Time" unit="ms" measuredescription="Time consumed within the last &quot;threshold condition&quot; since the last reset." attributename="MessagesThresholdTime" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSDestinationRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Producer Pending Bytes" unit="bytes" measuredescription="Count of unprocessed Bytes from this producer." attributename="BytesPendingCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSProducerRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Producer Sent Bytes" unit="bytes" measuredescription="Sent Bytes from this producer since the last reset." attributename="BytesSentCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSProducerRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Producer Pending Messages" unit="number" measuredescription="Count of unprocessed Messages from this producer (uncommitted und unacknowledged)." attributename="MessagesPendingCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSProducerRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Producer Message Sent" unit="number" measuredescription="Count of messsages sent from this producer since the last reset." attributename="MessagesSentCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JMSProducerRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JDBC Prepared Statement Cache Miss Count" unit="number" measuredescription="Count of Statement Requests which could not be served from the cache." attributename="PrepStmtCacheMissCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JDBCDataSourceRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JDBC Waiting for Connection High Count" unit="number" measuredescription="Highest count of Application Requests which are simultaneously waiting for the same instance of the Data Source." attributename="WaitingForConnectionHighCount" pathexpression="" aggregation="sum" />
+        <keyproperty key="Type" value="JDBCDataSourceRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JTA Active Transactions Total Count" unit="number" measuredescription="The number of active transactions on the server. " attributename="ActiveTransactionsTotalCount" pathexpression="" aggregation="avg" />
+        <keyproperty key="Type" value="JTARuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JTA Transaction Abadoned Total Count" unit="number" measuredescription="The total number of transactions that were abandoned since the server was started. " attributename="TransactionAbandonedTotalCount" pathexpression="" aggregation="avg" />
+        <keyproperty key="Type" value="JTARuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JTA Transaction Committed Total Count" unit="number" measuredescription="The total number of transactions committed since the server was started. " attributename="TransactionCommittedTotalCount" pathexpression="" aggregation="avg" />
+        <keyproperty key="Type" value="JTARuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="EJB Transactions Committed Total Count" unit="number" measuredescription="Provides a count of the total number of transactions that have been committed for this EJB. " attributename="TransactionsCommittedTotalCount" pathexpression="" aggregation="avg" />
+        <keyproperty key="Type" value="EJBTransactionRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="EJB Transactions Rolled Back Total Count" unit="number" measuredescription="Provides a count of the total number of transactions that have been rolled back for this EJB. " attributename="TransactionsRolledBackTotalCount" pathexpression="" aggregation="avg" />
+        <keyproperty key="Type" value="EJBTransactionRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="EJB Transactions Timed Out Total Count" unit="number" measuredescription="Provides a count of the total number of transactions that have timed out for this EJB. " attributename="TransactionsTimedOutTotalCount" pathexpression="" aggregation="avg" />
+        <keyproperty key="Type" value="EJBTransactionRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Runtime Connections High Count" unit="number" measuredescription="The highest number of connections to this WebLogic Server since the last reset. " attributename="ConnectionsHighCount" pathexpression="" aggregation="avg" />
+        <keyproperty key="Type" value="JMSRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Messages Sent Count" unit="number" measuredescription="The number of bytes sent by this session since the last reset. " attributename="MessagesSentCount" pathexpression="" aggregation="avg" />
+        <keyproperty key="Type" value="JMSSessionRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+      <mbean domain="com.bea">
+        <attribute metricname="JMS Messages Received Count" unit="number" measuredescription="The number of messages received by this consumer since the last reset. " attributename="MessagesReceivedCount" pathexpression="" aggregation="avg" />
+        <keyproperty key="Type" value="JMSSessionRuntime" exclude="false" />
+        <keyproperty key="Location" value="" exclude="true" />
+        <keyproperty key="*" value="" exclude="false" />
+      </mbean>
+    </jmxpmiperfmonmetricgroupconfig>
+    <information>
+      <description value="Dieses Plugin stellt die JMX Metriken für die WLS Instanzen zur Verfügung" />
+    </information>
+  </extension>
+</plugin>
+
