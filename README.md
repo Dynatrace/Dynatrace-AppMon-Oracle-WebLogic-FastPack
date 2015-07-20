@@ -10,4 +10,4 @@ his production monitoring know-how and supporting the dynaTrace Community.
 
 ![images_community/download/attachments/45383813/bit.png](images_community/download/attachments/45383813/bit.png)
 
-Find further information in the [dynaTrace community](https://community.compuwareapm.com/community/display/DL/Oracle+WebLogic+FastPack)
+Find further information in the [dynaTrace community](https://community.dynatrace.com/community/display/DL/Oracle+WebLogic+FastPack)
