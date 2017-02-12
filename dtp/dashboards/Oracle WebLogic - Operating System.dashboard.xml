@@ -2,8 +2,8 @@
 <!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
 <!-- Manual changes can cause severe problems and system instability -->
 <!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
-<dynatrace version="3.5.1.2342" date="4/8/11 7:27 AM">
-  <dashboardconfig memento.version="3.5.1.2342" icon="com.dynatrace.diagnostics.portlets/icons/chart_portlet_type.gif" sessiontype="live" locationassource="false" authorname="admin" opendrilldowninnewdashboard="false" sessionid="Oracle WebLogic" bgcolor="255,255,255,255" modified="2011-04-08T07:27:28+0200" id="c6de6be2-582a-4a84-b5df-18410043c84b" revision="0000012f-3394-500f-ba97-431129149171" source="server://goller" created="2010-11-09T18:05:27+0100" description="" name="Oracle WebLogic - Operating System" modifiedbyname="christian.grimm" locationascomparesource="false">
+<dynatrace version="5.6.0.0000" date="4/8/11 7:27 AM">
+  <dashboardconfig memento.version="5.6.0.0000" icon="com.dynatrace.diagnostics.portlets/icons/chart_portlet_type.gif" sessiontype="live" locationassource="false" authorname="admin" opendrilldowninnewdashboard="false" sessionid="Oracle WebLogic" bgcolor="255,255,255,255" modified="2011-04-08T07:27:28+0200" id="c6de6be2-582a-4a84-b5df-18410043c84b" revision="0000012f-3394-500f-ba97-431129149171" source="server://goller" created="2010-11-09T18:05:27+0100" description="" name="Oracle WebLogic - Operating System" modifiedbyname="christian.grimm" locationascomparesource="false">
     <reportconfig lines.per.table="100" enabled="true" print.legends="true" orientation="portrait" pagesize="A4" type="PDF" title="" override="false" levels.per.tree="10" description="" print.images="true" formatpdf="PDF Report" />
     <filter>
       <criterion type="webpage">
